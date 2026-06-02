@@ -40,3 +40,6 @@ plots/
 # Streamed-data cache (ATLAS Open Data is not committed)
 .cache/
 *.root
+
+# Claude Code project instructions (local only)
+CLAUDE.md
