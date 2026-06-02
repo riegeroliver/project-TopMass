@@ -61,7 +61,7 @@ pixi run test     # run the test suite
 pixi run docs     # preview the documentation site
 ```
 
-Open `Chapter1/intro.ipynb` to get started. The first cell streams a
+Open `Chapter1/01_intro.ipynb` to get started. The first cell streams a
 small fraction of the ATLAS Open Data:
 
 ```python
