@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "topmass"
+version = "0.1.0"
+description = "Helper package for the project-TopMass lab course on semileptonic top-quark mass measurement"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Oliver Rieger" }]
+dependencies = [
+    "atlasopenmagic",
+    "uproot",
+    "awkward",
+    "vector",
+    "hist",
+    "boost-histogram",
+    "pyarrow",
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "mplhep",
+    "iminuit",
+]
+
+[project.optional-dependencies]
+ml = ["scikit-learn", "xgboost"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["topmass*"]
+exclude = ["Chapter*", "data*", "docs*", "tests*"]

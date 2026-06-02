@@ -1,0 +1,42 @@
+# pixi
+.pixi/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.venv/
+.eggs/
+build/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MkDocs
+site/
+public/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Local output of analysis notebooks
+output/
+plots/
+*.pdf
+*.png
+!docs/**/*.png
+!docs/**/*.pdf
+
+# Streamed-data cache (ATLAS Open Data is not committed)
+.cache/
+*.root

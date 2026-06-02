@@ -1,0 +1,57 @@
+[workspace]
+name = "topmass"
+version = "0.1.0"
+description = "Lab course on semileptonic top-quark mass measurement (ATLAS Open Data)"
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
+
+[dependencies]
+python = "3.11.*"
+# HEP I/O and arrays
+uproot = "*"
+awkward = "*"
+vector = "*"
+hist = "*"
+boost-histogram = "*"
+pyarrow = "*"          # parquet cache for streamed data
+aiohttp = "*"          # required by fsspec HTTPFileSystem (uproot https streaming)
+requests = "*"
+# scientific stack
+numpy = "*"
+scipy = "*"
+pandas = "*"
+matplotlib = "*"
+mplhep = "*"
+iminuit = "*"
+# notebooks
+jupyterlab = "*"
+ipykernel = "*"
+ipywidgets = "*"
+# tooling
+pytest = "*"
+
+[pypi-dependencies]
+topmass = { path = ".", editable = true }   # local helper package, importable from any chapter
+atlasopenmagic = "*"                         # ATLAS Open Data streaming + metadata (pip-only)
+
+[tasks]
+lab = "jupyter lab"
+test = "pytest tests/"
+
+# Optional ML extension (Chapter 2):  pixi shell -e ml
+[feature.ml.dependencies]
+scikit-learn = "*"
+xgboost = "*"
+
+# Documentation site (lean, no HEP stack):  pixi run docs / docs-build
+[feature.docs.dependencies]
+python = "3.11.*"
+mkdocs = "*"
+
+[feature.docs.tasks]
+docs = "mkdocs serve"
+docs-build = "mkdocs build --strict --site-dir public"
+
+[environments]
+ml = ["ml"]
+docs = { features = ["docs"], no-default-feature = true }

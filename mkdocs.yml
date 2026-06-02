@@ -1,0 +1,21 @@
+site_name: Project TopMass
+site_description: A Python lab course on measuring the top-quark mass from semileptonic ttbar decays.
+repo_url: https://gitlab.cern.ch/jarieger/project-TopMass
+repo_name: jarieger/project-TopMass
+
+theme:
+  name: readthedocs
+
+nav:
+  - Home: index.md
+  - Physics background: physics-background.md
+  - Setup and tools: user-guide.md
+  - Leptonic channel (Group L): leptonic-channel.md
+  - Hadronic channel (Group H): hadronic-channel.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true

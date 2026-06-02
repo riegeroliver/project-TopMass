@@ -1,0 +1,14 @@
+image: ghcr.io/prefix-dev/pixi:latest
+
+stages:
+  - pages
+
+pages:
+  stage: pages
+  script:
+    - pixi run docs-build      # builds the site into public/ via the docs env
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
