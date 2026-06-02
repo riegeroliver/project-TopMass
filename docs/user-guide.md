@@ -52,7 +52,7 @@ pixi run lab
 You never start from a blank cell. Cells marked **✏️ Your turn** already run as
 they are — your job is to change only the line(s) flagged with `# ✏️`, re-run the
 cell (**Shift+Enter**), and observe how the result changes. Each task ends with a
-physics question to answer in your report, plus an optional **Stretch** for one
+physics question to answer in your report, plus an optional **Challenge** for one
 extra tweak if you finish early.
 
 ## Streaming the data

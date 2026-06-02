@@ -36,15 +36,22 @@ git clone https://gitlab.cern.ch/jarieger/project-TopMass.git
 cd project-TopMass
 ```
 
-### 3. Launch JupyterLab
+### 3. Install the environment
+
+```bash
+pixi install
+```
+
+This solves and installs the `topmass` environment from `pixi.toml` (the local
+`topmass/` package is installed editable automatically, so `from topmass import ...`
+works from any chapter directory). The first run streams the package index and may
+take a few minutes; later runs are near-instant.
+
+### 4. Launch JupyterLab
 
 ```bash
 pixi run lab
 ```
-
-The first run solves and installs the `topmass` environment from `pixi.toml` (the local
-`topmass/` package is installed editable automatically, so `from topmass import ...`
-works from any chapter directory), then opens JupyterLab.
 
 Other handy commands:
 
@@ -54,7 +61,7 @@ pixi run test     # run the test suite
 pixi run docs     # preview the documentation site
 ```
 
-Open `Chapter1/01_uproot_intro.ipynb` to get started. The first cell streams a
+Open `Chapter1/intro.ipynb` to get started. The first cell streams a
 small fraction of the ATLAS Open Data:
 
 ```python
@@ -73,7 +80,7 @@ The notebooks are aimed at first-year students with little coding experience, so
 you never write code from scratch. Cells marked **✏️ Your turn** already run as
 they are — change only the line(s) flagged with `# ✏️`, re-run with **Shift+Enter**,
 and see how the result changes. Each task ends with a physics question for your
-report and an optional **Stretch** for one extra tweak.
+report and an optional **Challenge** for one extra tweak.
 
 ## Repository layout
 
